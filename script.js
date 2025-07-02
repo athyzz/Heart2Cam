@@ -32,7 +32,15 @@ startBtn.onclick = () => {
     .then(stream => {
       video.srcObject = stream;
     })
-    .catch(err => alert('Kamera tidak bisa diakses 😢'));
+  startBtn.onclick = () => {
+  cameraSection.classList.remove('hidden');
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => { video.srcObject = stream; })
+    .catch(err => {
+      console.error(err);
+      alert('Kamera tidak bisa diakses. Pastikan kamu sudah mengizinkan akses dan browser kamu mendukung fitur ini.');
+    });
+};
 };
 
 captureBtn.onclick = () => {

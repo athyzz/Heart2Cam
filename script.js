@@ -12,7 +12,7 @@ const stickers = [
   'assets/mic.png',
 ];
 
-// Load stickers
+// Load stiker dan bisa diklik
 stickers.forEach(src => {
   const img = document.createElement('img');
   img.src = src;
@@ -39,7 +39,7 @@ startBtn.onclick = () => {
     })
     .catch(err => {
       console.error(err);
-      alert('Kamera tidak bisa diakses. Pastikan kamu sudah izinkan akses kamera ya sayy 😢');
+      alert('Kamera tidak bisa diakses. Pastikan kamu sudah izinkan akses kamera yaa 😢');
     });
 };
 
@@ -49,9 +49,8 @@ captureBtn.onclick = () => {
   canvas.height = video.videoHeight;
   ctx.drawImage(video, 0, 0);
 
-  // Tempel stiker ke canvas
-  const stickers = stickerContainer.querySelectorAll('img');
-  stickers.forEach(sticker => {
+  const stickersOnScreen = stickerContainer.querySelectorAll('img');
+  stickersOnScreen.forEach(sticker => {
     const rect = sticker.getBoundingClientRect();
     const videoRect = video.getBoundingClientRect();
     const x = rect.left - videoRect.left;
@@ -69,7 +68,6 @@ downloadBtn.onclick = () => {
   link.click();
 };
 
-// Drag function
 function enableDrag(el) {
   el.onmousedown = function (e) {
     e.preventDefault();

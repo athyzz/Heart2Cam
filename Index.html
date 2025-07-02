@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart2Cam</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hero">
+    <h1>Heart2Cam – Selfie Booth Bertema K‑Pop</h1>
+    <p>Pilih efek lucu, background dreamy, dan stiker Heart2Heart favoritmu!</p>
+    <button id="startBtn">Mulai Selfie Sekarang</button>
+  </section>
+
+  <section id="cameraSection" class="hidden">
+    <div class="camera-container">
+      <video id="video" autoplay playsinline></video>
+      <canvas id="canvas"></canvas>
+      <div id="stickerContainer"></div>
+    </div>
+    <div class="controls">
+      <button id="captureBtn">📸 Ambil Foto</button>
+      <button id="downloadBtn" class="hidden">💾 Simpan Foto</button>
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Booking Heart2Cam</h2>
+    <form id="bookingForm">
+      <input type="text" name="name" placeholder="Nama" required />
+      <input type="text" name="instagram" placeholder="Instagram" />
+      <input type="date" name="date" required />
+      <input type="number" name="people" placeholder="Jumlah Orang" min="1" required />
+      <button type="submit">Booking via WhatsApp</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

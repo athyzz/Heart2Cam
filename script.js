@@ -31,7 +31,7 @@ stickers.forEach(src => {
   stickerContainer.appendChild(img);
 });
 
-startBtn.onclick = () => { ...}
+startBtn.onclick = () => { ... }
   cameraSection.classList.remove('hidden');
   navigator.mediaDevices.getUserMedia({ video: true })
     .then(stream => {

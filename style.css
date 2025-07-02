@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #FFFDFD;
+}
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(90deg, #FFC0CB, #E6DAF5);
+}
+.hero h1 {
+  font-size: 2.5em;
+  color: #fff;
+}
+.hero p {
+  font-size: 1.2em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.hero button {
+  background: linear-gradient(90deg, #FFC0CB, #E6DAF5);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+}
+.hero button:hover {
+  box-shadow: 0 0 10px rgba(255,192,203,0.7);
+}
+
+.hidden { display: none; }
+
+.camera-container {
+  position: relative;
+  max-width: 480px;
+  margin: 20px auto;
+}
+#video, #canvas {
+  width: 100%;
+  border-radius: 20px;
+}
+#stickerContainer img {
+  position: absolute;
+  width: 100px;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.controls {
+  text-align: center;
+  margin: 10px 0;
+}
+.controls button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 20px;
+  border: none;
+  background: #FFC0CB;
+  color: #fff;
+  cursor: pointer;
+}
+.controls button:hover {
+  box-shadow: 0 0 8px rgba(255,192,203,0.5);
+}
+
+#booking {
+  background: #F9F6FF;
+  padding: 40px 20px;
+  text-align: center;
+}
+#booking input, #booking button {
+  padding: 12px;
+  margin: 6px 0;
+  font-size: 1em;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+#booking button {
+  background: #C8A2C8;
+  color: #fff;
+  border: none;
+} 
